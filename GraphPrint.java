@@ -5,8 +5,8 @@ public class GraphPrint {
 	Vertex[] vertices;
 
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
-		
+		GraphPrint myGraph = new GraphPrint("input_graph_print.txt");
+		myGraph.printGraph();		
 	}
 
 	public GraphPrint( String fileName){
@@ -26,8 +26,8 @@ public class GraphPrint {
 				int vertex1 = getIndexForVertex(edgeVertices[0]);
 				int vertex2 = getIndexForVertex(edgeVertices[1]);
 
-				vertices[vertex1].nbr = new Neighbor(vertex2, vertices[1].nbr);
-				vertices[vertex2].nbr = new Neighbor(vertex1, vertices[2].nbr);
+				vertices[vertex1].nbr = new Neighbor(vertex2, vertices[vertex1].nbr);
+				vertices[vertex2].nbr = new Neighbor(vertex1, vertices[vertex2].nbr);
 			}
 
 			sc.close();
