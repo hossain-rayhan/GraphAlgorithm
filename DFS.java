@@ -1,5 +1,5 @@
 //DFS-- using stack
-//Use the previous helper classes- GraphPrint, Vertex, and Neighbor
+//Use the previous helper classes- Graph, Vertex, and Neighbor
 //USe the input file: input_dfs.txt
 
 import java.util.Stack;
