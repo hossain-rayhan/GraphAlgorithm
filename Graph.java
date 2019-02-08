@@ -1,15 +1,18 @@
 import java.util.Scanner;
 import java.io.File;
 
-public class GraphPrint {
+public class Graph {
 	Vertex[] vertices;
 
 	public static void main(String[] args){
-		GraphPrint myGraph = new GraphPrint("input_graph_print.txt");
+		Graph myGraph = new Graph("input_graph_print.txt");
 		myGraph.printGraph();		
 	}
+	public Vertex[] getVertices(){
+		return vertices;
+	}
 
-	public GraphPrint( String fileName){
+	public Graph( String fileName){
 		try{
 			Scanner sc = new Scanner(new File(fileName));
 			//scan the vertex number and initialize the vertices array
